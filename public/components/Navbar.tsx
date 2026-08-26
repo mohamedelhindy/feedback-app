@@ -26,7 +26,7 @@ export const Navbar = () => {
         />
 
         <h1 className="text-base font-semibold text-slate-800 sm:text-lg">
-          Tech Pioneers
+          ECO-Pytes
         </h1>
       </div>
 
