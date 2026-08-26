@@ -6,9 +6,9 @@ interface StatCardProps {
 
 export const StatCard = ({ logo, number, text }: StatCardProps) => {
   return (
-    <div className="flex flex-1 items-center gap-4 px-6 py-7 sm:px-8">
+    <div className="flex flex-1 items-center gap-4 px-6 py-6 sm:px-8">
       <img
-        className="h-11 w-11 shrink-0 object-contain"
+        className="h-10 w-10 shrink-0 object-contain"
         src={logo}
         alt={`${logo} logo`}
       />
