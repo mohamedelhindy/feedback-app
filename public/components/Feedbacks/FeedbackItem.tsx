@@ -1,10 +1,11 @@
-interface FeedbackItemProps {
+export interface FeedbackItemProps {
   rateFace: string;
   title: string;
   description: string;
   images: string[];
   rating: string;
   date: string;
+  onClick: () => void;
 }
 
 export const FeedbackItem = ({
@@ -14,9 +15,13 @@ export const FeedbackItem = ({
   images,
   rating,
   date,
+  onClick,
 }: FeedbackItemProps) => {
   return (
-    <div className="flex w-full items-start gap-5 border-b border-slate-200 p-6 last:border-b-0">
+    <div
+      onClick={onClick}
+      className="flex w-full items-start gap-5 border-b border-slate-200 p-6 last:border-b-0"
+    >
       <div className="flex h-12 w-12 shrink-0 items-center justify-center">
         <img
           src={rateFace}

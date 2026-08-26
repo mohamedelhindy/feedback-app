@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { FeedbackItem } from "./FeedbackItem";
+import { FeedbackDetails } from "./FeedbackDetails";
 
 interface Feedback {
   id: number;
@@ -31,6 +32,10 @@ const ratingFaces = {
 export const FeedbackList = () => {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
 
+  const [selectedFeedback, setSelectedFeedback] = useState<Feedback | null>(
+    null,
+  );
+
   useEffect(() => {
     const getFeedbacks = async () => {
       const response = await fetch("/api/feedbacks");
@@ -41,6 +46,17 @@ export const FeedbackList = () => {
 
     getFeedbacks();
   }, []);
+
+  // If a feedback was selected,
+  // show the details instead of the list.
+  if (selectedFeedback) {
+    return (
+      <FeedbackDetails
+        feedback={selectedFeedback}
+        onBack={() => setSelectedFeedback(null)}
+      />
+    );
+  }
 
   return (
     <div className="w-full overflow-hidden rounded-xl border border-slate-200 bg-white">
@@ -53,6 +69,7 @@ export const FeedbackList = () => {
           images={feedback.images}
           rating={ratingLabels[feedback.rating as keyof typeof ratingLabels]}
           date={formatDate(feedback.created_at)}
+          onClick={() => setSelectedFeedback(feedback)}
         />
       ))}
     </div>
