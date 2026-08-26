@@ -7,7 +7,7 @@ export default function Home() {
       <>
         <Navbar />
       </>
-      <main className="flex flex-col items-center justify-between px-20 py-12">
+      <main className="flex flex-col items-center justify-between px-10 md:px-22 py-12">
         <FeedbackContent />
       </main>
     </div>
