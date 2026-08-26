@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283 259" fill="none">
+  <defs>
+    <linearGradient id="bubble" x1="96" y1="78" x2="197" y2="168" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="green" x1="31" y1="151" x2="70" y2="193" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86EFAC"/>
+      <stop offset="1" stop-color="#4ADE80"/>
+    </linearGradient>
+    <linearGradient id="yellow" x1="109" y1="193" x2="151" y2="235" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE047"/>
+      <stop offset="1" stop-color="#FACC15"/>
+    </linearGradient>
+    <linearGradient id="red" x1="202" y1="193" x2="242" y2="234" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#F87171"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#94A3B8" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- soft background speech bubbles -->
+  <path d="M145 72c0-13 10-23 23-23h17c13 0 23 10 23 23v39c0 13-10 23-23 23h-7l-10 17-2-17h-10c-13 0-23-10-23-23V72Z"
+        fill="#E2E8F0" opacity=".48"/>
+  <path d="M168 91c0-12 10-22 22-22h16c12 0 22 10 22 22v43c0 12-10 22-22 22h-7l-1 18-14-18h-16c-12 0-22-10-22-22V91Z"
+        fill="#CBD5E1" opacity=".26"/>
+
+  <!-- decorative dots -->
+  <circle cx="104" cy="50" r="2.3" fill="#DBEAFE"/>
+  <circle cx="145" cy="40" r="3.5" fill="#2563EB"/>
+  <circle cx="52" cy="115" r="2.4" fill="#BFDBFE"/>
+  <circle cx="79" cy="224" r="2.8" fill="#2563EB"/>
+  <circle cx="237" cy="168" r="2.4" fill="#DBEAFE"/>
+  <circle cx="249" cy="136" r="4" fill="#3B82F6"/>
+  <circle cx="239" cy="137" r="1.5" fill="white"/>
+
+  <!-- sparkle top-left -->
+  <path d="M61 54l1.8 4.4L67 60l-4.2 1.8L61 66l-1.8-4.2L55 60l4.2-1.6L61 54Z"
+        fill="#60A5FA"/>
+  <path d="M61 57.5v5M58.5 60h5" stroke="#BFDBFE" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- sparkle right -->
+  <path d="M250 130l1.7 4.1 4.3 1.9-4.3 1.7-1.7 4.3-1.7-4.3-4.3-1.7 4.3-1.9 1.7-4.1Z"
+        fill="#3B82F6"/>
+
+  <!-- main speech bubble shadow -->
+  <path d="M105 87c0-9.5 7.7-17.2 17.2-17.2h72.6c9.5 0 17.2 7.7 17.2 17.2v37.2c0 9.5-7.7 17.2-17.2 17.2h-48.2l-17.2 17.8v-17.8h-7.2c-9.5 0-17.2-7.7-17.2-17.2V87Z"
+        fill="#CBD5E1" opacity=".28" transform="translate(12 7)"/>
+
+  <!-- main speech bubble -->
+  <path d="M96 84c0-9.5 7.7-17.2 17.2-17.2h67.6c9.5 0 17.2 7.7 17.2 17.2v37.2c0 9.5-7.7 17.2-17.2 17.2h-48.2l-17.2 17.8v-17.8h-2.2c-9.5 0-17.2-7.7-17.2-17.2V84Z"
+        fill="url(#bubble)" filter="url(#shadow)"/>
+
+  <!-- three dots -->
+  <circle cx="126" cy="113" r="5.2" fill="white" opacity=".94"/>
+  <circle cx="146" cy="113" r="5.2" fill="white" opacity=".94"/>
+  <circle cx="166" cy="113" r="5.2" fill="white" opacity=".94"/>
+
+  <!-- happy face -->
+  <circle cx="52" cy="175" r="21" fill="url(#green)" filter="url(#shadow)"/>
+  <circle cx="45" cy="170" r="2.2" fill="#0F172A"/>
+  <circle cx="59" cy="170" r="2.2" fill="#0F172A"/>
+  <path d="M44.5 179c2.2 4.2 5.1 6.2 8.5 6.2s6.3-2 8.5-6.2"
+        stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- neutral face -->
+  <circle cx="130" cy="214" r="21" fill="url(#yellow)" filter="url(#shadow)"/>
+  <circle cx="123" cy="209" r="2.2" fill="#0F172A"/>
+  <circle cx="137" cy="209" r="2.2" fill="#0F172A"/>
+  <path d="M122 219h16" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- sad face -->
+  <circle cx="221" cy="214" r="21" fill="url(#red)" filter="url(#shadow)"/>
+  <circle cx="214" cy="209" r="2.2" fill="#0F172A"/>
+  <circle cx="228" cy="209" r="2.2" fill="#0F172A"/>
+  <path d="M213 221c2.1-4.1 5-6.1 8-6.1s5.9 2 8 6.1"
+        stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- subtle ambient glows -->
+  <circle cx="184" cy="78" r="22" fill="#DBEAFE" opacity=".25" filter="url(#soft)"/>
+  <circle cx="78" cy="177" r="24" fill="#DCFCE7" opacity=".18" filter="url(#soft)"/>
+</svg>

@@ -18,7 +18,7 @@ export const Navbar = () => {
         </Link>
         <Link
           className="text-[17px] font-medium text-slate-700 hover:text-blue-600 transition-colors"
-          href="/Feedback"
+          href="/feedback"
         >
           Feedback
         </Link>
