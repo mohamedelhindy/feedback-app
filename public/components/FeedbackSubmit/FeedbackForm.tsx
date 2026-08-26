@@ -5,6 +5,7 @@ import { FeedbackTextArea } from "./FeedbackTextArea";
 import { ImageUploader } from "./ImageUploader";
 import { RatingSelector } from "./RatingSelector";
 import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase/client";
 
 export const FeedbackForm = () => {
   const [rating, setRating] = useState<number | null>(null);
@@ -32,6 +33,24 @@ export const FeedbackForm = () => {
 
     try {
       const imageUrls: string[] = [];
+
+      for (const image of images) {
+        const fileName = `${crypto.randomUUID()}-${image.name}`;
+
+        const { error: uploadError } = await supabase.storage
+          .from("feedback-images")
+          .upload(fileName, image);
+
+        if (uploadError) {
+          throw uploadError;
+        }
+
+        const { data } = supabase.storage
+          .from("feedback-images")
+          .getPublicUrl(fileName);
+
+        imageUrls.push(data.publicUrl);
+      }
 
       const response = await fetch("/api/feedbacks", {
         method: "POST",
