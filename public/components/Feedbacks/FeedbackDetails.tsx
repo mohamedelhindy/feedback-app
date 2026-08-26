@@ -46,18 +46,23 @@ export const FeedbackDetails = ({ feedback, onBack }: FeedbackDetailsProps) => {
 
   return (
     <div className="w-full">
-      {/* Back */}
       <button
         onClick={onBack}
-        className="mb-6 flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700"
+        className="cursor-pointer group mb-6 flex items-center gap-2 text-sm font-semibold text-blue-600 transition-colors duration-200 hover:text-blue-700"
       >
-        ← Back to all feedbacks
+        <img
+          src="../assets/images/back-arrow.svg"
+          alt=""
+          className="h-4 w-4 transition-transform duration-200 group-hover:-translate-x-1"
+        />
+
+        <span className="group-hover:underline group-hover:underline-offset-4">
+          Back to all feedbacks
+        </span>
       </button>
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1fr_235px]">
-        {/* Main feedback */}
         <div className="rounded-xl border border-slate-200 bg-white p-6">
-          {/* Header */}
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
@@ -84,7 +89,6 @@ export const FeedbackDetails = ({ feedback, onBack }: FeedbackDetailsProps) => {
             </span>
           </div>
 
-          {/* Feedback */}
           <div className="mt-10">
             <h2 className="text-sm font-bold text-slate-900">Feedback</h2>
 
@@ -93,7 +97,6 @@ export const FeedbackDetails = ({ feedback, onBack }: FeedbackDetailsProps) => {
             </p>
           </div>
 
-          {/* Images */}
           {feedback.images.length > 0 && (
             <div className="mt-10">
               <h2 className="text-sm font-bold text-slate-900">Images</h2>
@@ -112,7 +115,6 @@ export const FeedbackDetails = ({ feedback, onBack }: FeedbackDetailsProps) => {
           )}
         </div>
 
-        {/* Details sidebar */}
         <div className="h-fit rounded-xl border border-slate-200 bg-white p-6">
           <h2 className="text-base font-bold text-slate-900">Details</h2>
 

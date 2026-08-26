@@ -1,4 +1,4 @@
-export interface FeedbackItemProps {
+interface FeedbackItemProps {
   rateFace: string;
   title: string;
   description: string;
@@ -20,9 +20,9 @@ export const FeedbackItem = ({
   return (
     <div
       onClick={onClick}
-      className="flex w-full items-start gap-5 border-b border-slate-200 p-6 last:border-b-0"
+      className="flex w-full cursor-pointer items-start gap-5 border-b border-slate-200 p-6 transition-colors duration-200 hover:bg-slate-50 last:border-b-0"
     >
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
         <img
           src={rateFace}
           alt={`${rating} face`}

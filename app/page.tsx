@@ -8,7 +8,7 @@ export default function Home() {
       <>
         <Navbar />
       </>
-      <main className="flex flex-col items-center justify-between">
+      <main className="flex flex-col items-center justify-between feedback-page-enter">
         <Hero />
         <FeatureCards />
       </main>

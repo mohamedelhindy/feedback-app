@@ -8,7 +8,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
 
-      <main className="flex flex-col items-center">
+      <main className="flex flex-col items-center feedback-page-enter">
         <AboutHero />
         <AboutStats />
         <AboutCTA />

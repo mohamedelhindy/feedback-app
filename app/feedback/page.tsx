@@ -1,5 +1,4 @@
-import { FeedbackFilters } from "@/public/components/Feedbacks/FeedbackFilters";
-import { FeedbackList } from "@/public/components/Feedbacks/FeedbackList";
+import { FeedbackContent } from "@/public/components/Feedbacks/FeedbackContent";
 import { Navbar } from "@/public/components/Navbar";
 
 export default function Home() {
@@ -9,9 +8,7 @@ export default function Home() {
         <Navbar />
       </>
       <main className="flex flex-col items-center justify-between px-20 py-12">
-        <FeedbackFilters />
-
-        <FeedbackList />
+        <FeedbackContent />
       </main>
     </div>
   );

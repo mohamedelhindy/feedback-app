@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { FeedbackItem } from "./FeedbackItem";
-import { FeedbackDetails } from "./FeedbackDetails";
 
 interface Feedback {
   id: number;
@@ -11,6 +10,10 @@ interface Feedback {
   rating: string;
   images: string[];
   created_at: string;
+}
+
+interface FeedbackListProps {
+  onSelectFeedback: (feedback: Feedback) => void;
 }
 
 const ratingLabels = {
@@ -29,12 +32,8 @@ const ratingFaces = {
   "5": "../assets/images/feedback-excellent.svg",
 };
 
-export const FeedbackList = () => {
+export const FeedbackList = ({ onSelectFeedback }: FeedbackListProps) => {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
-
-  const [selectedFeedback, setSelectedFeedback] = useState<Feedback | null>(
-    null,
-  );
 
   useEffect(() => {
     const getFeedbacks = async () => {
@@ -47,17 +46,6 @@ export const FeedbackList = () => {
     getFeedbacks();
   }, []);
 
-  // If a feedback was selected,
-  // show the details instead of the list.
-  if (selectedFeedback) {
-    return (
-      <FeedbackDetails
-        feedback={selectedFeedback}
-        onBack={() => setSelectedFeedback(null)}
-      />
-    );
-  }
-
   return (
     <div className="w-full overflow-hidden rounded-xl border border-slate-200 bg-white">
       {feedbacks.map((feedback) => (
@@ -69,7 +57,7 @@ export const FeedbackList = () => {
           images={feedback.images}
           rating={ratingLabels[feedback.rating as keyof typeof ratingLabels]}
           date={formatDate(feedback.created_at)}
-          onClick={() => setSelectedFeedback(feedback)}
+          onClick={() => onSelectFeedback(feedback)}
         />
       ))}
     </div>
