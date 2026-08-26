@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Magnifying Glass Lens Circle -->
+  <circle cx="45" cy="45" r="22" fill="none" stroke="#6b7280" stroke-width="7" />
+
+  <!-- Magnifying Glass Handle -->
+  <line x1="61" y1="61" x2="75" y2="75" stroke="#6b7280" stroke-width="7" stroke-linecap="round" />
+</svg>
