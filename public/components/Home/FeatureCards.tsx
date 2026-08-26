@@ -2,7 +2,7 @@ import { FeatureCard } from "./FeatureCard";
 
 export const FeatureCards = () => {
   return (
-    <div className="w-full flex gap-17 mb-17 px-25">
+    <div className="w-full flex gap-20 mb-17 px-25 align-center justify-center flex-wrap">
       <FeatureCard
         icon="../assets/images/feedback-pencil.svg"
         title="Easy to use"

@@ -31,7 +31,7 @@ export const Navbar = () => {
       </div>
 
       <Link href="/feedbacks">
-        <button className="px-5 py-2.5 rounded-md bg-blue-600 text-white text-sm font-medium shadow-sm hover:bg-blue-700 transition-colors">
+        <button className="px-5 py-3.5 rounded-md bg-blue-600 text-white text-sm font-medium shadow-sm hover:bg-blue-700 transition-colors">
           Submit Feedback
         </button>
       </Link>
