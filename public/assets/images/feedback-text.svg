@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+  <!-- Background matching the image background tone -->
+  <rect width="24" height="24" fill="#f4f5f7" />
+
+  <!-- Secondary/Back Speech Bubble -->
+  <path 
+    d="M 14 11.5 H 17.5 C 18.88 11.5 20 12.62 20 14 V 17.5 C 20 18.88 18.88 20 17.5 20 H 16.2 L 14 21.8 V 20 H 13.5 C 12.9 20 12.35 19.78 11.93 19.4" 
+    fill="none" 
+    stroke="#3b62f6" 
+    stroke-width="1.75" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+  />
+
+  <!-- Primary/Front Speech Bubble -->
+  <path 
+    d="M 7.5 5 H 13.5 C 14.88 5 16 6.12 16 7.5 V 11.5 C 16 12.88 14.88 14 13.5 14 H 9.5 L 6 17.5 V 14 H 7.5 C 6.12 14 5 12.88 5 11.5 V 7.5 C 5 6.12 6.12 5 7.5 5 Z" 
+    fill="none" 
+    stroke="#3b62f6" 
+    stroke-width="1.75" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+  />
+</svg>
