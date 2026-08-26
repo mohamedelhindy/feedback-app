@@ -16,7 +16,7 @@ export const AboutCTA = () => {
 
         <Link
           className="shrink-0 rounded-md bg-blue-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-blue-700"
-          href="/feedback"
+          href="/submit-feedback"
         >
           Submit Feedback
         </Link>

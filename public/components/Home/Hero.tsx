@@ -23,7 +23,7 @@ export const Hero = () => {
         <div className="flex flex-wrap gap-3 sm:gap-4">
           <Link
             className="w-fit px-5 sm:px-6 py-3 sm:py-3.5 rounded-md bg-blue-600 text-white text-sm font-medium shadow-sm hover:bg-blue-700 transition-colors"
-            href="/feedback"
+            href="/submit-feedback"
           >
             Submit Feedback
           </Link>
