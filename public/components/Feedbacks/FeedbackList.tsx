@@ -34,17 +34,61 @@ const ratingFaces = {
 
 export const FeedbackList = ({ onSelectFeedback }: FeedbackListProps) => {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const getFeedbacks = async () => {
-      const response = await fetch("/api/feedbacks");
-      const data = await response.json();
+      try {
+        setIsLoading(true);
 
-      setFeedbacks(data);
+        const response = await fetch("/api/feedbacks");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch feedbacks.");
+        }
+
+        const data = await response.json();
+
+        setFeedbacks(data);
+      } catch (error) {
+        console.error(error);
+        setError("Failed to load feedback.");
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     getFeedbacks();
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex w-full flex-col items-center justify-center rounded-xl border border-slate-200 bg-white py-16">
+        <div className="h-1 w-32 overflow-hidden rounded-full bg-slate-200">
+          <div className="loading-bar h-full w-1/2 rounded-full bg-blue-600" />
+        </div>
+
+        <p className="mt-3 text-sm text-slate-500">Loading feedback...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white py-16">
+        <p className="text-sm font-medium text-red-500">{error}</p>
+      </div>
+    );
+  }
+
+  if (feedbacks.length === 0) {
+    return (
+      <div className="flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white py-16">
+        <p className="text-sm text-slate-500">No feedback yet.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full overflow-hidden rounded-xl border border-slate-200 bg-white">
