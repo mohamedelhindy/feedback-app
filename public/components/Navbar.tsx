@@ -18,7 +18,6 @@ export const Navbar = () => {
 
   return (
     <div className="relative flex h-[68px] w-full items-center justify-between border-b border-slate-200 bg-white px-4 sm:px-6 lg:px-10">
-      {/* Logo */}
       <div className="flex items-center justify-center gap-2.5">
         <img
           className="h-8 w-8 object-contain"
@@ -27,11 +26,10 @@ export const Navbar = () => {
         />
 
         <h1 className="text-base font-semibold text-slate-800 sm:text-lg">
-          For later
+          Tech Pioneers
         </h1>
       </div>
 
-      {/* Desktop Navigation */}
       <div className="hidden items-center gap-6 sm:flex md:gap-8">
         {navLinks.map((link) => (
           <Link
@@ -43,7 +41,6 @@ export const Navbar = () => {
           >
             {link.name}
 
-            {/* Animated underline */}
             <span
               className={`absolute -bottom-[7px] left-0 h-[2px] bg-blue-600 transition-all duration-300 ease-out ${
                 isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
@@ -53,14 +50,12 @@ export const Navbar = () => {
         ))}
       </div>
 
-      {/* Desktop Submit Button */}
       <Link href="/submit-feedback" className="hidden sm:block">
         <button className="cursor-pointer rounded-md bg-blue-600 px-3.5 py-2.5 text-xs font-medium text-white shadow-sm transition-all duration-200 hover:bg-blue-700 hover:shadow-md sm:px-4 md:px-5 sm:text-sm">
           Submit Feedback
         </button>
       </Link>
 
-      {/* Mobile Menu Button */}
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -77,7 +72,6 @@ export const Navbar = () => {
         </span>
       </button>
 
-      {/* Mobile Menu */}
       <div
         className={`absolute left-0 top-[68px] z-50 w-full border-b border-slate-200 bg-white px-4 py-4 shadow-md transition-all duration-300 ease-out sm:hidden ${
           isOpen
@@ -101,7 +95,6 @@ export const Navbar = () => {
             </Link>
           ))}
 
-          {/* Mobile Submit Button */}
           <Link
             href="/submit-feedback"
             onClick={() => setIsOpen(false)}
