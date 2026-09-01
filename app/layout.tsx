@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Recycle Feedback App",
+  title: "Eco-Pytes Feedback App",
   description: "Share your feedback and help us improve our services.",
 };
 

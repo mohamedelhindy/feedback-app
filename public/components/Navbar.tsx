@@ -26,7 +26,7 @@ export const Navbar = () => {
         />
 
         <h1 className="text-base font-semibold text-slate-800 sm:text-lg">
-          ECO-pytes
+          ECO-Pytes
         </h1>
       </div>
 
